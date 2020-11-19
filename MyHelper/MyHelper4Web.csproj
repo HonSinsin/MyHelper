@@ -57,6 +57,7 @@
     <Compile Include="MyFileDialogHelper.cs" />
     <Compile Include="MyFileHelper.cs" />
     <Compile Include="MyFtpHelper.cs" />
+    <Compile Include="MyHttpDownLoad.cs" />
     <Compile Include="MyKeyboardHelper.cs" />
     <Compile Include="MyMD5Helper.cs" />
     <Compile Include="MyMouseHelper.cs" />

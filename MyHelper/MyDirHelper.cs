@@ -84,13 +84,14 @@ namespace MyHelper4Web
         /// 得到当前文件夹中所有文件列表string[]
         /// </summary>
         /// <param name="dirFullPath">要遍历的文件夹全路径</param>
+        /// <param name="selectAllFiles">是否搜索当前目录和所有子目录</param>
         /// <returns>string[] 文件列表</returns>
-        public static string[] GetDirFiles(string dirFullPath)
+        public static string[] GetDirFiles(string dirFullPath, bool selectAllFiles)
         {
             string[] fileList;
             if (Directory.Exists(dirFullPath))
             {
-                fileList = Directory.GetFiles(dirFullPath, "*.*", SearchOption.TopDirectoryOnly);
+                fileList = Directory.GetFiles(dirFullPath, "*.*", selectAllFiles ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
             }
             else //文件夹不存在
             {
